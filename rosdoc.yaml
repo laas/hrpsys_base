@@ -1,0 +1,4 @@
+ - builder: external
+   external_url: https://code.google.com/p/hrpsys-base/
+   output_dir: homepage
+   name: Homepage
