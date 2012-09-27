@@ -12,10 +12,11 @@ INSTALL_DIR = install
 
 CMAKE_FLAGS = \
 -DCMAKE_INSTALL_PREFIX:STRING=`rospack find hrpsys_base`/$(INSTALL_DIR)/ \
--DCMAKE_BUILD_TYPE:STRING=Release					 \
+-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo				 \
 -DOPENRTM_DIR:STRING=`rospack find openrtm_cpp`/install			 \
 -DOPENHRP_DIR:STRING=`rospack find openhrp`/install			 \
 -DIRRLICHT_DIR:STRING=/usr						 \
+-DQHULL_DIR:STRING=/usr						 	 \
 -DENABLE_INSTALL_RPATH:BOOL=ON
 
 PKG_CONFIG_PATH = \
