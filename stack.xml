@@ -1,0 +1,10 @@
+<stack>
+  <description brief="hrpsys-base">
+    ROS package of the 3rd party package hrpsys-base.
+  </description>
+  <author>Maintained by Thomas Moulard</author>
+  <license>BSD</license>
+  <review status="experimental" notes=""/>
+  <url>http://ros.org/wiki/hrpsys_base</url>
+  <depend stack="ros" />
+</stack>

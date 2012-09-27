@@ -1,0 +1,18 @@
+<package>
+  <description brief="hrpsys-base">
+    ROS package of the 3rd party package hrpsys-base.
+  </description>
+  <author>Thomas Moulard</author>
+  <license>EPL</license>
+  <review status="experimental" notes=""/>
+  <url>https://code.google.com/p/hrpsys-base/</url>
+
+  <export>
+    <cpp
+       cflags="-I${prefix}/install/include"
+       lflags="-L${prefix}/install/lib -Wl,-rpath,${prefix}/install/lib"
+       />
+
+    <rosdoc config="rosdoc.yaml" />
+  </export>
+</package>
