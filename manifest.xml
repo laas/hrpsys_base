@@ -19,6 +19,9 @@
   <depend package="openrtm_cpp" />
   <depend package="openhrp" />
 
-  <rosdep name="libxml2"/>
-  <rosdep name="pkg-config"/>
+  <rosdep name="irrlicht" />
+  <rosdep name="libglew" />
+
+  <rosdep name="libxml2" />
+  <rosdep name="pkg-config" />
 </package>
