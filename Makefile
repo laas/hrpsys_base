@@ -5,22 +5,31 @@ TARBALL     = build/hrpsys_base-$(VERSION).tar.bz2
 TARBALL_URL= \
 https://github.com/downloads/laas/hrpsys_base/hrpsys_base-$(VERSION).tar.bz2
 SOURCE_DIR  = build/hrpsys_base-$(VERSION)
+UNPACK_CMD = tar xjvf
 MD5SUM_FILE = hrpsys_base-$(VERSION).tar.bz2.md5sum
 
 INSTALL_DIR = install
 
 CMAKE_FLAGS = \
 	-DCMAKE_INSTALL_PREFIX:STRING=`rospack find hrpsys_base`/$(INSTALL_DIR)/ \
-	-DCMAKE_BUILD_TYPE:STRING=Release
+	-DCMAKE_BUILD_TYPE:STRING=Release					 \
+	-DOPENRTM_DIR:STRING=`rospack find openrtm_cpp`/install			 \
+	-DOPENHRP_DIR:STRING=`rospack find openhrp`/install			 \
+	-DENABLE_INSTALL_RPATH:BOOL=ON
+
+PKG_CONFIG_PATH = \
+`rospack find openhrp`/install/lib/pkgconfig:\
+`rospack find openrtm_cpp`/install/lib/pkgconfig
 
 include $(shell rospack find mk)/download_unpack_build.mk
 
 hrpsys_base: $(INSTALL_DIR)/installed
 
 $(INSTALL_DIR)/installed: $(SOURCE_DIR)/unpacked
-	cd $(SOURCE_DIR)	  		\
-	&& cmake . ${CMAKE_FLAGS}		\
-	&& make			  		\
+	cd $(SOURCE_DIR)	  			\
+	&& PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"		\
+	   cmake . ${CMAKE_FLAGS}			\
+	&& make			  			\
 	&& make install
 	touch $(INSTALL_DIR)/installed
 
