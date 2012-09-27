@@ -3,8 +3,11 @@
     ROS package of the 3rd party package hrpsys-base.
   </description>
   <author>Maintained by Thomas Moulard</author>
-  <license>BSD</license>
+  <license>BSD,EPL</license>
   <review status="experimental" notes=""/>
   <url>http://ros.org/wiki/hrpsys_base</url>
+  <depend stack="octomap_mapping" /> <!-- octomap -->
+  <depend stack="openhrp" /> <!-- openhrp -->
+  <depend stack="openrtm_cpp" /> <!-- openrtm_cpp -->
   <depend stack="ros" />
 </stack>

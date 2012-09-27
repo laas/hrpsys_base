@@ -18,6 +18,7 @@
 
   <depend package="openrtm_cpp" />
   <depend package="openhrp" />
+  <depend package="octomap" />
 
   <rosdep name="irrlicht" />
   <rosdep name="libglew" />

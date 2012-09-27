@@ -11,15 +11,15 @@ MD5SUM_FILE = hrpsys_base-$(VERSION).tar.bz2.md5sum
 INSTALL_DIR = install
 
 CMAKE_FLAGS = \
-	-DCMAKE_INSTALL_PREFIX:STRING=`rospack find hrpsys_base`/$(INSTALL_DIR)/ \
-	-DCMAKE_BUILD_TYPE:STRING=Release					 \
-	-DOPENRTM_DIR:STRING=`rospack find openrtm_cpp`/install			 \
-	-DOPENHRP_DIR:STRING=`rospack find openhrp`/install			 \
-	-DENABLE_INSTALL_RPATH:BOOL=ON
+-DCMAKE_INSTALL_PREFIX:STRING=`rospack find hrpsys_base`/$(INSTALL_DIR)/ \
+-DCMAKE_BUILD_TYPE:STRING=Release					 \
+-DOPENRTM_DIR:STRING=`rospack find openrtm_cpp`/install			 \
+-DOPENHRP_DIR:STRING=`rospack find openhrp`/install			 \
+-DIRRLICHT_DIR:STRING=/usr						 \
+-DENABLE_INSTALL_RPATH:BOOL=ON
 
 PKG_CONFIG_PATH = \
-`rospack find openhrp`/install/lib/pkgconfig:\
-`rospack find openrtm_cpp`/install/lib/pkgconfig
+`rospack find octomap`/lib/pkgconfig:`rospack find openhrp`/install/lib/pkgconfig:`rospack find openrtm_cpp`/install/lib/pkgconfig
 
 include $(shell rospack find mk)/download_unpack_build.mk
 
