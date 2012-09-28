@@ -19,12 +19,12 @@
   <depend package="openrtm_cpp" />
   <depend package="openhrp" />
   <depend package="octomap" />
+  <depend package="opencv2" />
 
   <rosdep name="libirrlicht-dev" />
   <rosdep name="libglew-dev" />
   <rosdep name="sdl" />
 
-  <rosdep name="opencv2.3" />
   <rosdep name="jython" />
   <rosdep name="libqhull" />
   <rosdep name="libxml2" />
