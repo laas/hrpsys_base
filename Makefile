@@ -10,9 +10,10 @@ MD5SUM_FILE = hrpsys_base-$(VERSION).tar.bz2.md5sum
 
 INSTALL_DIR = install
 
+# Use Release here as RelWithDebInfo does not work.
 CMAKE_FLAGS = \
 -DCMAKE_INSTALL_PREFIX:STRING=`rospack find hrpsys_base`/$(INSTALL_DIR)/ \
--DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo				 \
+-DCMAKE_BUILD_TYPE:STRING=Release					 \
 -DOPENRTM_DIR:STRING=`rospack find openrtm_cpp`/install			 \
 -DOPENHRP_DIR:STRING=`rospack find openhrp`/install			 \
 -DIRRLICHT_DIR:STRING=/usr						 \
