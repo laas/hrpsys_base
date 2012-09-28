@@ -9,5 +9,8 @@
   <depend stack="octomap_mapping" /> <!-- octomap -->
   <depend stack="openhrp" /> <!-- openhrp -->
   <depend stack="openrtm_cpp" /> <!-- openrtm_cpp -->
+  <depend stack="vision_opencv" />
+  <depend stack="common_rosdep" />
+  <depend stack="documentation" />
   <depend stack="ros" />
 </stack>

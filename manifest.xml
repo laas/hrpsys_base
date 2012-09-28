@@ -20,9 +20,14 @@
   <depend package="openhrp" />
   <depend package="octomap" />
 
-  <rosdep name="irrlicht" />
-  <rosdep name="libglew" />
+  <rosdep name="libirrlicht-dev" />
+  <rosdep name="libglew-dev" />
+  <rosdep name="sdl" />
 
+  <rosdep name="opencv2.3" />
+  <rosdep name="jython" />
+  <rosdep name="libqhull" />
   <rosdep name="libxml2" />
+  <rosdep name="doxygen" />
   <rosdep name="pkg-config" />
 </package>

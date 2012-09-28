@@ -28,8 +28,9 @@ hrpsys_base: $(INSTALL_DIR)/installed
 
 $(INSTALL_DIR)/installed: $(SOURCE_DIR)/unpacked
 	cd $(SOURCE_DIR)	  			\
-	&& PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"		\
-	   cmake . ${CMAKE_FLAGS}			\
+	&& export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"	\
+	&& pkg-config --libs openhrp3.1	\
+	&& cmake . ${CMAKE_FLAGS}			\
 	&& make			  			\
 	&& make install
 	touch $(INSTALL_DIR)/installed

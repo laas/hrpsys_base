@@ -1,4 +1,11 @@
-libirrlicht:
+libirrlicht-dev:
   ubuntu: libirrlicht-dev
-libglew:
-  ubuntu: libglew1.5-dev libglew1.5
+libglew-dev:
+  arch: glew
+  ubuntu: libglew1.5-devlibglew-dev
+  arch: glew
+  ubuntu: libglew1.5-dev
+  fedora: glew-devel
+  fedora: glew-devel
+sdl:
+  ubuntu: libsdl1.2-dev
